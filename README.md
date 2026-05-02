@@ -17,3 +17,9 @@ See scripts/run-gemma4.sh
 - Local LLM inference
 - Remote API access
 - Stable 4096 context on 8GB device
+
+## 📊 Monitoring (jtop)
+
+Below is the system running Gemma 4 locally on the Jetson Orin Nano:
+
+![jtop](./assets/jtop1.png)
