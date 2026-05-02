@@ -32,15 +32,15 @@ Below is the system running Gemma 4 locally on the Jetson Orin Nano:
 
 ## 🧩 Architecture
 
-
+```
 Mac client
-   ↓
+>
 Jetson Orin Nano
-   ↓
+>  
 Docker + llama.cpp
-   ↓
+ >  
 Gemma 4 GGUF
-   ↓
+ > 
 HTTP API on port 8080
 
 
@@ -49,3 +49,20 @@ HTTP API on port 8080
 chmod +x scripts/run-gemma4.sh
 
 ./scripts/run-gemma4.sh
+
+
+## 🧪 API Usage
+
+```
+curl http://JETSON_IP:8080/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "gemma-4",
+    "messages": [
+      {"role": "user", "content": "Write a Python function that scrapes a website"}
+    ],
+    "max_tokens": 150
+  }'
+
+
+  
