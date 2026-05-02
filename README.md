@@ -14,12 +14,38 @@ See scripts/run-gemma4.sh
 - llama.cpp works better than Ollama on Jetson
 
 ## 🚀 Result
-- Local LLM inference
-- Remote API access
-- Stable 4096 context on 8GB device
+- Model: Gemma 4 E2B Q4_K_S
+
+- Context: 4096 tokens
+
+- GPU offload: 1 layer
+
+- Device: Jetson Orin Nano 8GB
+
+- Access: Browser + OpenAI-compatible API
 
 ## 📊 Monitoring (jtop)
 
 Below is the system running Gemma 4 locally on the Jetson Orin Nano:
 
 ![jtop](./assets/jtop1.png)
+
+## 🧩 Architecture
+
+
+Mac client
+   ↓
+Jetson Orin Nano
+   ↓
+Docker + llama.cpp
+   ↓
+Gemma 4 GGUF
+   ↓
+HTTP API on port 8080
+
+
+## 🚀 How to Run
+
+chmod +x scripts/run-gemma4.sh
+
+./scripts/run-gemma4.sh
