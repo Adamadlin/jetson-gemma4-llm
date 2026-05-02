@@ -25,6 +25,7 @@ See `scripts/run-gemma4.sh`
 - Device: Jetson Orin Nano (8GB)
 - Access: Browser + OpenAI-compatible API
 - Tokens/sec: ~6–10 (approx)
+Performance varies depending on prompt size, but the system remains stable under typical coding and QA workloads.
 
 ---
 
@@ -72,4 +73,7 @@ curl http://JETSON_IP:8080/v1/chat/completions \
     "max_tokens": 150
   }'
 
-  
+
+## 💡 Why This Matters
+
+This demonstrates that modern LLMs can run locally on low-power edge devices with the right optimizations.
